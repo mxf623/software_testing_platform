@@ -3,6 +3,10 @@
     <el-card  shadow="hover">
       <el-tabs v-model="activeName">
           <SystemTest :parentHeight="parentHeight" />
+          <br>
+          <p>---------------------------------------------------------------------</p>
+          <p>单测试用例：</p>
+          <SingleCase />
       </el-tabs>
     </el-card>
   </div>

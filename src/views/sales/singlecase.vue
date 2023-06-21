@@ -1,40 +1,41 @@
 <template>
   <div class="single-case">
-    <el-form
-      class="single-form"
-      :label-position="labelPosition"
-      label-width="400px"
-      :model="formLabelAlign"
-    >
-      <el-form-item label="销售的主机数量M（台）">
-        <el-input v-model="formLabelAlign.M"></el-input>
-      </el-form-item>
-      <el-form-item label="销售的显示器数量I（台）">
-        <el-input v-model="formLabelAlign.I"></el-input>
-      </el-form-item>
-      <el-form-item label="销售的外设数量P（套）">
-        <el-input v-model="formLabelAlign.P"></el-input>
-      </el-form-item>
-      <el-form-item label="预计销售额（元）">
-        <el-input v-model="formLabelAlign.pre_amount"></el-input>
-      </el-form-item>
-      <el-form-item label="预计佣金（元）">
-        <el-input v-model="formLabelAlign.pre_earn"></el-input>
-      </el-form-item>
-    </el-form>
-          <el-button
+    <el-button
         class="main-button"
-        type="success"
         plain
         @click="doTest"
         :loading="loading"
-        >进行测试<i class="el-icon-upload el-icon--right"></i
-      ></el-button>
-        <div>
-    <span>实际销售额：{{A}}</span>
-    <el-divider direction="vertical"></el-divider>
-    <span>实际佣金：{{E}}</span>
-  </div>
+        >进行测试</el-button>
+   <div class="res">
+    <el-form
+    class="single-form"
+    :label-position="labelPosition"
+    label-width="400px"
+    :model="formLabelAlign"
+  >
+    <el-form-item label="销售的主机数量M（台）">
+      <el-input v-model="formLabelAlign.M"></el-input>
+    </el-form-item>
+    <el-form-item label="销售的显示器数量I（台）">
+      <el-input v-model="formLabelAlign.I"></el-input>
+    </el-form-item>
+    <el-form-item label="销售的外设数量P（套）">
+      <el-input v-model="formLabelAlign.P"></el-input>
+    </el-form-item>
+    <el-form-item label="预计销售额（元）">
+      <el-input v-model="formLabelAlign.pre_amount"></el-input>
+    </el-form-item>
+    <el-form-item label="预计佣金（元）">
+      <el-input v-model="formLabelAlign.pre_earn"></el-input>
+    </el-form-item>
+  </el-form>
+        
+      <div>
+  <span>实际销售额：{{A}}</span>
+  <br>
+  <span>实际佣金：{{E}}</span>
+</div>
+   </div>
   </div>
 </template>
 
@@ -114,7 +115,10 @@ export default {
   margin-top: 10px;
 }
 .main-button {
-  width:100%;
+  width: 100px;
+  position: absolute;
+  bottom: 320px;
+  left: 100px;
 
 }
 .box-card {
@@ -124,5 +128,9 @@ export default {
   width:600px;
   top:50%;
   left:50%;
+}
+.res{
+display: flex;
+justify-content: space-around;
 }
 </style>

@@ -1,35 +1,38 @@
 <template>
   <div class="single-case">
-    <el-form
-      class="single-form"
-      :label-position="labelPosition"
-      label-width="400px"
-      :model="formLabelAlign"
-    >
-      <el-form-item label="第一条边的值">
-        <el-input v-model="formLabelAlign.A"></el-input>
-      </el-form-item>
-      <el-form-item label="第二条边的值">
-        <el-input v-model="formLabelAlign.B"></el-input>
-      </el-form-item>
-      <el-form-item label="第三条边的值">
-        <el-input v-model="formLabelAlign.C"></el-input>
-      </el-form-item>
-      <el-form-item label="程序预期输出">
-        <el-input v-model="formLabelAlign.expectation"></el-input>
-      </el-form-item>
-    </el-form>
-          <el-button
+    <el-button
         class="main-button"
-        type="success"
         plain
         @click="doTest"
         :loading="loading"
-        >进行测试<i class="el-icon-upload el-icon--right"></i
+        >进行测试</i
       ></el-button>
-        <div>
-    <span>实际输出：{{actual}}</span>
-  </div>
+      <div class="res">
+        <el-form
+        class="single-form"
+        :label-position="labelPosition"
+        label-width="400px"
+        :model="formLabelAlign"
+      >
+        <el-form-item label="第一条边的值">
+          <el-input v-model="formLabelAlign.A"></el-input>
+        </el-form-item>
+        <el-form-item label="第二条边的值">
+          <el-input v-model="formLabelAlign.B"></el-input>
+        </el-form-item>
+        <el-form-item label="第三条边的值">
+          <el-input v-model="formLabelAlign.C"></el-input>
+        </el-form-item>
+        <el-form-item label="程序预期输出">
+          <el-input v-model="formLabelAlign.expectation"></el-input>
+        </el-form-item>
+      </el-form>
+            
+          <div>
+      <span>实际输出：{{actual}}</span>
+    </div>
+      </div>
+   
   </div>
 </template>
 
@@ -107,8 +110,10 @@ export default {
   margin-top: 10px;
 }
 .main-button {
-  width:100%;
-
+  width: 100px;
+  position: absolute;
+  bottom: 260px;
+  left: 100px;
 }
 .box-card {
   padding: 0;
@@ -117,5 +122,9 @@ export default {
   width:600px;
   top:50%;
   left:50%;
+}
+.res{
+display: flex;
+justify-content: space-around;
 }
 </style>
