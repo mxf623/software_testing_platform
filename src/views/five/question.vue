@@ -2,12 +2,14 @@
     <div>
       <div style="font-size:16px;">
         
-      <p >按照下列C语言程序前的编号，构建起程序图（control flow graph or program diagram），不需要理解具体的代码实现内容，只要理解其逻辑即可。</p>
-      <img src="./12.jpg"/>
-  <p style="margin-top:100px;font-size:20px;">程序图如下：</p>
+      <p >讨论题：边界值测试可以适用于function(method) level，class level,，system level，分析电商平台系统测试时考虑的边界值情况。</p>
+        
+        <br>
+        <p>答案：</p>
+        <br>
 </div>
 
-<img src="./ans.png"/>
+<img src="./answer.png"/>
 
 
 

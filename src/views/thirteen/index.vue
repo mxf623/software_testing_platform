@@ -3,9 +3,7 @@
     <el-card shadow="hover">
       <el-tabs v-model="activeName" @tab-click="handleClick">
 
-        <el-tab-pane label="问题描述" name="first">
-          <SalesQuestion />
-        </el-tab-pane>
+        <SalesQuestion />
 
 
       </el-tabs>

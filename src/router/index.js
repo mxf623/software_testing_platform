@@ -6,7 +6,10 @@ import Layout from '@/views/layout/'
 import Cash from '@/views/cash/'
 import Triangle from '@/views/triangle'
 import Sales from '@/views/sales/'
+import web from '@/views/web/'
 
+import five from '@/views/five/'
+import erp from '@/views/erp/'
 import Sales1 from '@/views/sales1/'
 import CS from '@/views/CS/'
 import Nine from '@/views/nine/'
@@ -34,7 +37,23 @@ const routes = [
         path:'/cash',
         name:'cash',
         component:Cash
-      },{
+      },
+      {
+        path:'/five',
+        name:'five',
+        component:five
+      },
+      {
+        path:'/erp',
+        name:'erp',
+        component:erp
+      },
+      {
+        path:'/web',
+        name:'web',
+        component:web
+      },
+      {
         path:'/triangle',
         name:'triangle',
         component:Triangle
